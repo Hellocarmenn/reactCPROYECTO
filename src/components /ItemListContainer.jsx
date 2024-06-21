@@ -1,11 +1,23 @@
-//import './ItemListContainer.css'; // Archivo para estilos
+import { useEffect, useState } from "react";
+import  {pedirDatos}  from "../helpers/pedirDatos"
+import ItemList from "./ItemList";
+const ItemListContainer = () => {
+  const [productos,setProductos] = useState([]);
+  console.log(productos)
 
-// eslint-disable-next-line react/prop-types
-const ItemListContainer = ({ greeting }) => {
+  useEffect(() =>{
+    pedirDatos()
+      .then((res) => {
+        setProductos(res);
+      })
+
+  },[])
+
   return (
-    <div className="item-list-container">
-      <h2>{greeting}</h2>
+    <div>
+      <ItemList productos={productos}/>
     </div>
+   
   );
 }
 

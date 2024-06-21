@@ -171,3 +171,6 @@
     border: 2px solid var(--clr-main);
     outline: 2px solid var(--clr-main);
 }
+img{
+    width: 100%;
+}
