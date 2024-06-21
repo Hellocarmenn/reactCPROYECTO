@@ -10,8 +10,6 @@ const Item = ({ producto }) => {
         <p>Categoria:{producto.categoria}</p>
         <p>{producto.descripcion}</p>
         <Link className="ver-mas" to={`/item/${producto.id}`}>Ver más</Link>
-        
-        
       </div>
     
     </div>
