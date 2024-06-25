@@ -8,10 +8,11 @@ export const pedirDatos = () => {
     })
 }
 
-
 export const pedirItemPorId = (id) => {
     return new Promise((resolve, reject) => {
+        
         const item = data.find((el) => el.id === id);
+
         if (item) {
             resolve(item);
         } else {
@@ -19,5 +20,6 @@ export const pedirItemPorId = (id) => {
                 error: "No se encontró el producto"
             })
         }
+
     })
 }
